@@ -1,3 +1,5 @@
+#improved version of me and my pp code: via Duke
+
 class Person  #create a person class
     attr_reader:name   #attr_reader=>can not change
     attr_accessor:bank_account, :happiness, :hygiene
@@ -12,7 +14,7 @@ class Person  #create a person class
         @happiness = 8
         @hygiene = 8
       end
-#########################################
+
     def happiness=(index)
         if index > 10
             @happiness = 10
@@ -21,7 +23,7 @@ class Person  #create a person class
         else @happiness = index
         end 
     end
-#########################################
+
     def hygiene=(index)
         if index > 10
             @hygiene = 10
@@ -30,7 +32,7 @@ class Person  #create a person class
         else @hygiene = index
         end 
     end
-#########################################
+
     def happy? 
         if @happiness > 7
             return true
@@ -38,7 +40,7 @@ class Person  #create a person class
             return false
         end
     end
-#########################################
+
     def clean? 
         if @hygiene > 7
             return true
@@ -46,29 +48,29 @@ class Person  #create a person class
             return false
         end
     end
-#########################################    
+    
     def get_paid(salary)
         @bank_account += salary
         return "all about the benjamins"
     end
-#########################################  
+  
     def take_bath
        self.hygiene += 4
         return "♪ Rub-a-dub just relaxing in the tub ♫"
     end
-#########################################
+
     def work_out
     self.hygiene -= 3
     self.happiness += 2
     return "♪ another one bites the dust ♫"
     end 
-#########################################
+
     def call_friend(person)
     self.happiness += 3
     person.happiness += 3
     return "Hi #{person.name}! It's #{self.name}. How are you?"
     end 
-#########################################
+
     def start_conversation(person,topic)
         if topic == "politics"
         self.happiness -= 2
@@ -84,5 +86,5 @@ class Person  #create a person class
         return "blah blah blah blah blah"
         end
     end
-#########################################
+
 end  
